@@ -1,0 +1,258 @@
+Context Engineering + Agent Prompting + System Design thinking
+
+✔ Design **production-grade system prompts**
+✔ Control LLM behavior deterministically
+✔ Prompt **AI coding agents** effectively
+✔ Build **multi-step reasoning workflows**
+✔ Translate vague human intent → precise AI instructions
+✔ Evaluating the Prompts
+✔ Debug bad outputs like a software bug
+✔ Teach this skill confidently (authority signal)
+
+🧠 MENTAL MODEL (READ THIS FIRST – 10 MIN)
+
+> Prompting is \*\*programming the mind of a probabilistic machine\*\*
+> using \*\*language + structure + constraints + feedback loops\*\*
+
+Top 1% people think in:
+
+⦁	State
+⦁	Context
+⦁	Control
+⦁	Failure modes
+
+🕐 PHASE 1: FOUNDATIONS THAT MOST PEOPLE SKIP
+
+How LLMs ACTUALLY Think
+
+⦁	Token prediction (why wording matters)
+⦁	Attention & context window
+⦁	Why models hallucinate
+⦁	Why temperature ≠ creativity control
+⦁	Why longer prompts sometimes fail
+⦁	Why we should not treat model like human
+Outcome:
+⦁	You stop “trial-and-error prompting” forever.
+
+---
+
+Prompt ≠ Instruction
+
+⦁	Instructions vs Context vs Constraints
+⦁	Why “be helpful” is useless
+⦁	Why role-based prompts work
+Core Pattern:
+⦁	Role → Objective → Constraints → Process → Output Format → Validation
+This is the spine of all good prompts
+
+---
+
+Hour 2–4: Prompt as Code
+
+⦁	Determinism vs exploration
+⦁	Idempotent prompts
+⦁	Prompt versioning
+⦁	Why prompts break in production
+Exercise:
+⦁	Take 1 vague prompt
+Rewrite it into a **reusable prompt function**
+
+---
+
+🕐 PHASE 2: SYSTEM PROMPTS (THE MOST VALUABLE SKILL)
+
+System Prompt Architecture
+
+⦁	System vs Developer vs User
+⦁	Why system prompts should be:
+⦁	Declarative
+⦁	Explicit
+⦁	Non-negotiable
+Golden Rule:
+System prompts define identity + boundaries, not tasks.
+
+---
+
+Behavior Control Techniques
+
+⦁	Refusal conditioning
+⦁	Oververbosity control
+⦁	Tone locking
+⦁	Knowledge cutoff handling
+⦁	Safety alignment without neutering
+Pattern:
+⦁	If X happens → Do Y
+⦁	If unclear → Ask Z
+⦁	Never do A
+
+---
+
+Production-Grade System Prompts
+
+⦁	Modular system prompts
+⦁	Environment-specific prompts (dev/prod)
+⦁	User intent isolation
+⦁	Prompt hardening
+Exercise:
+⦁	Design a system prompt for:
+AI tutor
+AI coding reviewer
+AI PM assistant
+
+---
+
+🕐 PHASE 3: CONTEXT ENGINEERING (THE REAL GAME)
+
+> Prompting is static.
+> Context engineering is \*\*dynamic intelligence\*\*.
+
+Context Is a Resource
+
+⦁	What belongs in context vs prompt
+⦁	When too much context kills accuracy
+⦁	Context compression techniques
+⦁	Summarization vs memory
+Mental model:
+⦁	Context = Working Memory
+⦁	Prompt = Program
+
+---
+
+Structured Context Injection
+
+⦁	JSON / Markdown context
+⦁	Semantic chunking
+⦁	Priority tagging
+⦁	Context ordering effects
+⦁	The Context Hierarchy
+⦁	Context Engineering Principles
+Pattern:
+[CRITICAL]
+[REFERENCE]
+[OPTIONAL]
+
+---
+
+Multi-Turn Context Control
+
+⦁	Context drift
+⦁	Instruction decay
+⦁	Reinforcement prompts
+⦁	Self-correction loops
+Exercise:
+⦁	Simulate a 10-turn conversation
+⦁	Maintain behavior consistency
+
+---
+
+🕐 PHASE 4: AI CODING AGENTS & TOOL PROMPTING – 7 HOURS
+
+Prompting Coding Models
+
+⦁	Why “write code” fails
+⦁	Spec-driven prompting
+⦁	Diff-based instructions
+⦁	Guardrails for refactors
+Pattern:
+Given existing code → Apply minimal change → Output diff only
+
+---
+
+Agent Prompting
+
+Critical for LangGraph, ADK, AutoGPT-like systems.
+⦁	Tool-use prompting
+⦁	Thought vs action separation
+⦁	Planning prompts
+⦁	Failure recovery prompts
+⦁	Multi-Step Reasoning - Chaining and Workflows
+⦁	System prompt architecture
+Agent Loop:
+⦁	Plan → Act → Observe → Reflect → Retry
+
+---
+
+Debugging AI Like Software
+
+⦁	Why output failed
+⦁	Which instruction was ignored
+⦁	How to patch prompts
+⦁	The Diagnostic Framework - Debugging Prompts Systematically
+⦁	The Systematic Testing/Evaluation Protocol
+Exercise:
+⦁	Take a failing agent
+⦁	Fix it only using prompt changes
+
+---
+
+🕐 PHASE 5: EXPERT PATTERNS & AUTHORITY
+
+Advanced Prompt Patterns
+
+Must-know patterns:
+Context Provision (When: Task needs background)
+⦁	Zero Shot
+⦁	Few Shot
+⦁	Many Shot
+⦁	Pattern Recognition: Use zero-shot first. Add examples only when output quality suffers.
+Reasoning Enhancement (When: Multi-step logic needed / Reasoning needed)
+⦁	Chain-of-thought (controlled)
+⦁	Zero Shot COT
+⦁	Few Short COT
+⦁	Tree of Thoughts
+⦁	Self Consistency
+⦁	Pattern Recognition: Math, logic, planning, debugging = always use CoT
+Decomposition (When: Task too complex for single step)
+⦁	Least to Most
+⦁	Setp Back
+⦁	Plan then Execute
+⦁	Pattern Recognition: Research, analysis, complex coding = decompose
+Self-Improvement (When: Quality isn't good enough)
+⦁	Self Refine
+⦁	Reflexion
+⦁	Constitutional AI
+⦁	Pattern Recognition: Writing, code review, quality control = iterate
+Verification (When: Accuracy is critical)
+⦁	ReAct
+⦁	Verification
+⦁	Multiple Perspectives
+⦁	Pattern Recognition: Fact-checking, important decisions = verify
+Advanced/Meta (When: System-level design)
+⦁	Meta Prompting
+⦁	Automatic Prompt Engineer
+⦁	Ensembling
+⦁	Pattern Recognition: Production systems, optimization = meta
+
+⦁	Persona Dynamics
+⦁	Role Playing
+---
+
+Domain-Specific Prompting
+
+Learn how prompting changes for:
+⦁	Coding
+⦁	Teaching
+⦁	Research
+⦁	Product
+⦁	Writing
+
+---
+
+Become Visible as an Expert
+
+⦁	Create 5 reusable prompt templates
+⦁	Write 1 LinkedIn post explaining prompt engineering simply
+⦁	Open-source a prompt repo
+⦁	Document failures + lessons
+authority comes from teaching clarity, not complexity.
+
+---
+
+🧠 FINAL TRUTH (IMPORTANT)
+
+> The top 1% are not better writers.
+> They are better \*\*thinkers and system designers\*\*.
+You already:
+* Understand agents
+* Think in systems
+* Care about depth
