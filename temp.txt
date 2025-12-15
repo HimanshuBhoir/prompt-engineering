@@ -65,9 +65,9 @@ System Prompt Architecture
 
 ⦁	System vs Developer vs User
 ⦁	Why system prompts should be:
-⦁	Declarative
-⦁	Explicit
-⦁	Non-negotiable
+    ⦁	Declarative
+    ⦁	Explicit
+    ⦁	Non-negotiable
 Golden Rule:
 System prompts define identity + boundaries, not tasks.
 
